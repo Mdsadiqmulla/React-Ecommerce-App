@@ -5,9 +5,11 @@ import Store from "./components/Pages/Store/Store";
 import NavBar from './components/Pages/Home/NavBar';
 import About from "./components/Pages/About/About";
 import Cart from './components/Cart/Cart';
+import ContextProvider from './components/contrext-store/ContextProvider';
 function App() {
   return (
     <div>
+      <ContextProvider>
       <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -16,6 +18,7 @@ function App() {
            {/* <Route path='/cart' element={<Cart />} /> */}
 
         </Routes>
+        </ContextProvider>
     </div>
   );
 }
