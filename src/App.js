@@ -7,7 +7,8 @@ import About from "./components/Pages/About/About";
 import Cart from './components/Cart/Cart';
 import ContextProvider from './components/contrext-store/ContextProvider';
 import Footer from './components/Footer';
-import  Header from './component/Header'
+import Header from './components/Header'; // Fixed import path here
+
 function App() {
   return (
     <div>
@@ -22,7 +23,7 @@ function App() {
 
         </Routes>
         <Footer />
-        </ContextProvider>
+      </ContextProvider>
     </div>
   );
 }
