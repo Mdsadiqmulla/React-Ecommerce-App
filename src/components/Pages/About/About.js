@@ -2,7 +2,6 @@ import React, { Fragment } from 'react'
 // import Button from 'react-bootstrap/Button';
 // import Form from 'react-bootstrap/Form';
 import './About.css'
-import Header from '../../Header';
 
 const About = () => {
   return (
@@ -30,7 +29,6 @@ const About = () => {
     </Form>
     </div> */}
 
-      <Header />
       <div className='about-main-div'>
         <div className='about-heading'>
           About

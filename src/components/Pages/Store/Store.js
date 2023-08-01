@@ -74,7 +74,7 @@ const Store = (props) => {
 
           <Row xs={1} md={2} className="g-4">
             {productsArr.map((item, idx) => (
-              // key=idx,
+             
               <Col className='store-cards-row' key={idx + Math.random()}>
 
                 {/* <div className='store-card-div'> */}
