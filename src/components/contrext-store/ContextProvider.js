@@ -21,7 +21,7 @@ const ContextProvider = (props) => {
 
     const ContextValue={
         items:cartState.items,
-        totalAmount:0,
+        totalAmount:cartState.totalAmount,
         addToCart:addToCartHandler,
         removeFromCart:removeFromCartHandler
     }

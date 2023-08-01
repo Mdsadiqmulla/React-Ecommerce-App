@@ -80,11 +80,14 @@
         margin-right: -50px;
     }
     
-    /* <div className='cart-item-div'>
-    <div className='cart-item-first'>
-    </div>
-    <div className='cart-item-second'>
-    </div>
-    <div className='cart-item-third'>
-    </div>
-    </div> */
+    .cart-footer{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* margin: auto; */
+        margin-left: 30px;
+    }
+    .cart-total-div{
+        margin-right: 10px;
+    }
