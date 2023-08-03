@@ -7,7 +7,8 @@ import About from "./components/Pages/About/About";
 import Cart from './components/Cart/Cart';
 import ContextProvider from './components/contrext-store/ContextProvider';
 import Footer from './components/Footer';
-import Header from './components/Header'; // Fixed import path here
+import Header from './components/Header'; 
+import Authentication from './components/Authentication/Authentication';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           <Route path="/store" element={<Store />} />
           <Route path="/about" element={<About />} />
            {/* <Route path='/cart' element={<Cart />} /> */}
-
+           <Route path='/login' element={<Authentication />} />
         </Routes>
         <Footer />
       </ContextProvider>
