@@ -1,17 +1,20 @@
 import React, { Fragment, useContext } from 'react'
 import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
+import { NavLink } from 'react-router-dom'
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import { Link, useParams } from 'react-router-dom';
 import cartContext from '../../contrext-store/contextAPI';
 import './Store.css'
 
 const Store = (props) => {
   const ctx = useContext(cartContext);
+  const id=useParams()
   const productsArr = [
 
     {
-
+      id:'a1',
       title: 'Colors',
 
       price: 100,
@@ -22,6 +25,7 @@ const Store = (props) => {
 
     {
 
+      id:'a2',
       title: 'Black and white Colors',
 
       price: 50,
@@ -31,7 +35,7 @@ const Store = (props) => {
     },
 
     {
-
+      id:'a3',
       title: 'Yellow and Black Colors',
 
       price: 70,
@@ -42,6 +46,7 @@ const Store = (props) => {
 
     {
 
+      id:'a4',
       title: 'Blue Color',
 
       price: 100,
@@ -73,21 +78,22 @@ const Store = (props) => {
 
 
           <Row xs={1} md={2} className="g-4">
-            {productsArr.map((item, idx) => (
              
-              <Col className='store-cards-row' key={idx + Math.random()}>
-
+             {productsArr.map((item) => (
+              <Col className='store-cards-row' key={item.id} id={item.id}>
                 {/* <div className='store-card-div'> */}
                 <Card.Title className='store-card-title'>{item.title}</Card.Title>
                 <Card>
+                <NavLink to ={`/singleproduct/${item.id}`}>
+
                   <Card.Img variant="top" src={item.imageUrl} />
+                  </NavLink>
                   <Card.Body>
                     {/* <Card.Title>Card title</Card.Title> */}
                     <Card.Text className='store-card-description'>
                       <div>${item.price}</div>
                       <div>
-                        <Button variant="primary" onClick={addToCartHandler.bind(null, item.title, item.price, item.imageUrl, idx)}>ADD TO CART</Button>
-
+                      <Button variant="primary" onClick={addToCartHandler.bind(null,item.title,item.price,item.imageUrl, item.id)}>ADD TO CART</Button>
                       </div>
                     </Card.Text>
                   </Card.Body>

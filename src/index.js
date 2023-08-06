@@ -4,12 +4,19 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
+import ContextProvider from './components/contrext-store/ContextProvider';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <React.StrictMode>
+    <ContextProvider>
      <BrowserRouter>
     <App />
     </BrowserRouter>
+    </ContextProvider>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
